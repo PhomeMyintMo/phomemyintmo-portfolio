@@ -13,12 +13,12 @@ import FloatingChat from './components/FloatingChat'
 
 const MainPages = () => {
   return(
-    <>
+    <div className='space-y-32 mx-auto p-4 sm:p-8 md:p-16'>
     <Home/>
     <Skills/>
     <Projects/>
     <Experience/>
-    </>
+    </div>
   )
 }
 

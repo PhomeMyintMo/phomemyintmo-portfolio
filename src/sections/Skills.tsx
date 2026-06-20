@@ -1,6 +1,7 @@
 import { FaReact, FaNodeJs } from "react-icons/fa"
 import { SiTailwindcss, SiReactquery, SiRedux, SiPostgresql, SiTypescript } from "react-icons/si"
 import { TbBrandFramerMotion } from "react-icons/tb"
+import useReveal from "../hooks/useReveal"
 export const skills = [
   { name: "React", icon: <FaReact />, color: "text-[#61DAFB]" },
   { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-[#06B6D4]" },
@@ -13,20 +14,21 @@ export const skills = [
 ]
 
 const Skills = () => {
+  const ref = useReveal<HTMLElement>();
   return (
-    <section id="skills" className="bg-background text-color p-6">
+    <section ref={ref} id="skills" className="section">
       <h2 className="text-3xl font-bold mb-10 text-center">Tech Stacks</h2>
 
-      <div className="max-w-3xl mx-auto space-y-6">
+      <div className="space-y-6">
 
-      <div className="flex flex-wrap items-center justify-center gap-4">
+      <div className="flex flex-wrap justify-left gap-3">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="flex max-w-sm items-center gap-3 p-3 bg-background shadow-[var(--shadow-brutal)] border"
+            className="flex max-w-sm items-center gap-1 p-1 px-2 bg-background shadow-[var(--shadow-brutal)] border"
           >
-            <span className={`text-2xl ${skill.color}`}>{skill.icon}</span>
-            <p className="text-sm font-medium">{skill.name}</p>
+            <span className={` ${skill.color}`}>{skill.icon}</span>
+            <p className="text-xs sm:text-sm font-medium">{skill.name}</p>
           </div>
         ))}
       </div>

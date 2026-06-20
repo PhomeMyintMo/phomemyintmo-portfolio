@@ -1,30 +1,31 @@
+import useReveal from "../hooks/useReveal";
 
 const Experience = () => {
+  const ref = useReveal<HTMLElement>();
   const experiences = [
     {
       company: "MTG (Myanmar Technology Gateway) Co.,Ltd",
-      role: "Junior Frontend Developer",
+      role: "Frontend Developer",
       duration: "Dec 2024 – Present",
-      year: "1 year & 3 months",
       description: [
-        "Develop and maintain an admin portal for managing business data.",
-        "Build reusable React components and maintain a clean, scalable codebase.",
+        "Developed and maintained responsive CRUD-based web portals by integrating RESTful APIs.",
+        "Optimized frontend performance, enhanced user experience, and improved code maintainability."
       ],
     },
     {
       company: "SoftGuide",
-      role: "Frontend Developer Intern",
+      role: "Developer Intern",
       duration: "May 2024 – Jul 2024",
       year: "3 months",
       description: [
-        "Learned software development fundamentals and built several small web applications.",
+        "Learned software development fundamentals and built a small web application.",
       ],
     },
   ];
 
   return (
-    <section id="my-journey" className="py-24">
-      <div className="mx-auto max-w-5xl px-6">
+    <section ref={ref} id="my-journey" className="section">
+      <div>
         <h2 className="mb-16 text-center text-4xl font-bold">
           My Journey
         </h2>

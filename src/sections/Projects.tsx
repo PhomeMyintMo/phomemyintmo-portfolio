@@ -3,6 +3,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
 import { FaReact } from "react-icons/fa6";
 import { SiFirebase, SiMarkdown, SiRedux, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { Link } from "react-router-dom"
+import useReveal from "../hooks/useReveal";
 
 export const projects = [
   {
@@ -126,9 +127,10 @@ export const projects = [
 
 const Projects = () => {
   const displayProjects = projects.slice(0, 3);
+  const ref = useReveal<HTMLElement>();
   return (
-    <section id="projects" className="bg-background py-20">
-      <div className="max-w-5xl mx-auto flex flex-col">
+    <section id="projects" className="section" ref={ref}>
+      <div className="flex flex-col">
         <h2 className="text-3xl font-bold mb-10 text-center">Selected Works</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

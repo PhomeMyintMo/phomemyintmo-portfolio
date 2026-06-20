@@ -2,11 +2,13 @@ import { useState } from "react";
 import { projects } from "../sections/Projects";
 import { Link, useLocation } from "react-router-dom";
 import { BiArrowBack } from "react-icons/bi";
+import useReveal from "../hooks/useReveal";
 
 export const AllProjects = () => {
     const location = useLocation();
     const [activeTab, setActiveTab] = useState(location.state?.initialProject ?? 0);
     const [currentImage, setCurrentImage] = useState(0);
+    const ref = useReveal<HTMLElement>();
 
     const project = projects[activeTab];
 
@@ -23,21 +25,21 @@ export const AllProjects = () => {
     //     setCurrentImage((prev) => prev === 0 ? project.images.length - 1 : prev - 1)
     // }
     return (
-        <section className="py-20 bg-background min-h-screen">
-            <div className="max-w-6xl mx-auto px-4 space-y-4">
+        <section ref={ref} className="section py-20">
+            <div className="space-y-4">
                 <Link to={"/"} className="flex items-center gap-2 hover:font-semibold"><BiArrowBack />Go Back</Link>
 
-                <h1 className="text-3xl font-bold mb-10">
+                <h1 className="text-2xl sm:text-3xl font-bold">
                     Projects Showcase
                 </h1>
 
                 {/* Tabs */}
-                <div className="flex justify-center flex-wrap gap-3 border-b pb-4 mb-10">
+                <div className="flex justify-center flex-wrap gap-3 border-b pb-4">
                     {projects.map((project, index) => (
                         <button
                             key={project.id}
                             onClick={() => handleTabChange(index)}
-                            className={`shrink-0 px-4 py-2 font-bold border transition-all
+                            className={`shrink-0 px-3 py-1 text-sm font-bold border transition-all
               ${activeTab === index
                                     ? "bg-primary shadow-[var(--shadow-brutal)]"
                                     : "bg-background hover:bg-primary/20"
@@ -52,11 +54,11 @@ export const AllProjects = () => {
                 <div className="space-y-8">
 
                     <div>
-                        <h2 className="text-xl md:text-2xl font-bold text-justify">
+                        <h2 className="text-xl md:text-2xl font-bold text-left">
                             {project.title}
                         </h2>
 
-                        <p className="mt-4 text-justify">
+                        <p className="mt-4 text-left">
                             {project.detailedDescription}
                         </p>
                     </div>
@@ -113,9 +115,8 @@ export const AllProjects = () => {
                     </div>
 
 
-
                     {/* Features */}
-                    <div className="text-justify">
+                    <div className="text-left">
                         <h3 className="font-bold text-xl mb-4">
                             Features
                         </h3>
@@ -132,10 +133,10 @@ export const AllProjects = () => {
                     {/* Tech Stack */}
                     <div className="text-justify">
                         <div className="mb-2">
-                        <h3 className="font-bold text-xl mb-4">
-                            Tech Stack
-                        </h3>
-                         <span className="font-semibold">⋆ Frontend</span>
+                            <h3 className="font-bold text-xl mb-4">
+                                Tech Stack
+                            </h3>
+                            <span className="font-semibold">⋆ Frontend</span>
                         </div>
 
                         <div className="flex flex-wrap gap-2">
