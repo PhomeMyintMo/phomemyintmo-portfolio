@@ -1,7 +1,7 @@
 import { BsArrowRight } from "react-icons/bs"
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa"
-import { FaReact } from "react-icons/fa6";
-import { SiFirebase, SiMarkdown, SiRedux, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
+import { FaNodeJs, FaReact } from "react-icons/fa6";
+import { SiExpress, SiFirebase, SiMarkdown, SiPrisma, SiRedux, SiShadcnui, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { Link } from "react-router-dom"
 import useReveal from "../hooks/useReveal";
 
@@ -10,7 +10,7 @@ export const projects = [
     id: "ai-chatbot",
     title: "🤖 Personal AI Chatbot",
     description: "An AI-powered portfolio chatbot built with Next.js, GroqAI, TypeScript, and Tailwind CSS that allows visitors to learn about my background, projects, and skills through natural conversations.",
-    detailedDescription: "This project combines a modern portfolio with an AI assistant to create a more engaging way for visitors to explore my work. Instead of navigating multiple pages, users can ask questions about my experience, technical skills, projects, and contact information in natural language. The application integrates the OpenAI API through Next.js API routes, renders Markdown responses, persists chat history with local storage, supports responsive layouts across devices, and includes features such as suggested prompts, typing indicators, and chat history management.",
+    detailedDescription: "This project combines a modern portfolio with an AI assistant to create a more engaging way for visitors to explore my work. Instead of navigating multiple pages, users can ask questions about my experience, technical skills, projects, and contact information in natural language.",
     liveLink: "https://personal-ai-chatbot-alpha.vercel.app/",
     codeLink: "https://github.com/PhomeMyintMo/personal-ai-chatbot",
     techStack: [
@@ -27,12 +27,11 @@ export const projects = [
       { name: "React Markdown", icon: <SiMarkdown />, color: "text-gray-600 dark:text-gray-300", },],
     images: ["/ChatBot/AIChat.png"],
     features: [
-      "AI-powered conversational portfolio assistant",
       "GroqAI API integration with Next.js API Routes",
       "Markdown rendering for formatted responses",
-      "Persistent chat history using localStorage",
+      "Persistent chat history using sessionStorage",
       "Responsive design optimized for desktop and mobile",
-      "Modern UI built with Tailwind CSS and shadcn/ui",]
+    ]
   },
   {
     id: "content-management",
@@ -40,7 +39,7 @@ export const projects = [
     description: "A web portal for content creators to manage and track their content efficiently.",
     detailedDescription: (
       <>
-        A content management portal developed for <a href="" className="text-blue-600 font-semibold">MTG</a> that enables content creators to organize tasks, monitor content progress, receive real-time notifications, and streamline their workflow through an intuitive and responsive interface.
+        A content management portal developed for my current company <a href="" className="text-blue-600 font-semibold">MTG</a> that enables content creators to organize tasks, monitor content progress, receive real-time notifications, and streamline their workflow through an intuitive and responsive interface.
       </>
     ),
     liveLink: "#",
@@ -64,7 +63,7 @@ export const projects = [
       {
         name: "Shadcn UI",
         icon: <SiShadcnui />,
-        color: "text-black dark:text-white",
+        color: "",
       },
       {
         name: "Firebase",
@@ -85,44 +84,27 @@ export const projects = [
       "💾 Preserves page, filters, and pagination state when navigating between list, detail, create, and edit pages"]
   },
   {
-    id: "ecommerce-admin-website",
-    title: "🛍️ E-commerce Website",
-    description: "A full-stack e-commerce platform with customer and admin dashboards for product management, and shopping.",
-    detailedDescription: "A full-stack e-commerce application featuring separate customer and admin interfaces. Customers can browse products, search by categories, add items to their cart, save products to favorites, and place orders (checkout/payment integration is not yet implemented). The admin dashboard provides complete inventory management with CRUD operations for products and categories, image uploads, and an intuitive interface for managing the store.",
-    liveLink: "#",
-    codeLink: "#",
-    techStack: [{
-      name: "TypeScript",
-      icon: <SiTypescript />,
-      color: "text-[#3178C6]",
-    }, {
-      name: "TypeScript",
-      icon: <SiTypescript />,
-      color: "text-[#3178C6]",
-    }],
-    images: ["/images/admin-dashboard.png"],
-    features: ["Real-time revenue stream tracking via WebSockets", "Secure JWT authentication & role authorization", "Drag-and-drop category hierarchy sorting"]
-  },
-  {
     id: "ecommerce-website",
     title: "E-commerce Website",
-    description: "A full-stack E-commerce website built with React. A clean, simple, and easy to shop experience.",
-    detailedDescription: "A customer-facing storefront built alongside the Admin Portal. It implements atomic cart operations, persistent local storage checkouts, and seamless payment gateway simulations.",
-    liveLink: "#",
-    codeLink: "#",
-    techStack: [{
-      name: "TypeScript",
-      icon: <SiTypescript />,
-      color: "text-[#3178C6]",
-    }, {
-      name: "TypeScript",
-      icon: <SiTypescript />,
-      color: "text-[#3178C6]",
-    }],
-    images: ["/images/store-front.png", "/images/store-cart.png"],
-    features: ["Instant local cart sync optimizations", "Elastic product search filter architecture", "Single-step multi-item checkout mock pipelines"]
-  },
-  
+description:
+  "An ongoing full-stack fashion e-commerce case study focused on creating a smooth, efficient, and convenient online shopping experience.",    detailedDescription: "This personal case study explores the challenges of online clothing shopping in Myanmar, where many small businesses rely on Facebook, a platform that currently requires a VPN to access. This dependency makes browsing products, communicating with sellers, and completing purchases slow and inconvenient. I designed and developed a modern e-commerce platform that enables small clothing businesses to manage their own online storefronts, allowing customers to browse products, search by category, and add items to their cart.",
+    liveLink: "https://e-commerce-phome.vercel.app/",
+    codeLink: "https://github.com/PhomeMyintMo/e-commerce",
+    techStack: [{ name: "React", icon: <FaReact />, color: "text-[#61DAFB]", },
+    { name: "TypeScript", icon: <SiTypescript />, color: "text-[#3178C6]", },
+    { name: "Tailwind CSS", icon: <SiTailwindcss />, color: "text-[#38BDF8]", },
+    { name: "shadcn/ui", icon: <SiShadcnui />, color: "", },
+    { name: "Node.js", icon: <FaNodeJs />, color: "text-[#5FA04E]", },
+    { name: "Express.js", icon: <SiExpress />, color: "", },
+    { name: "Prisma", icon: <SiPrisma />, color: "text-[#2D3748]", },
+    { name: "ImageKit", icon: <img src="/ImageKitLogo.svg" className="w-8" />, color: "text-[#0095FF]", },],
+    images: ["/Ecommerce/AllProducts.png", "/Ecommerce/DetailProduct.png",],
+    features: ["Product browsing with category and search filtering",
+      "Persistent shopping cart with local storage", "Responsive UI optimized for mobile shopping",
+      "Image hosting and optimization with ImageKit", "RESTful API built with Express and Prisma",
+      ],
+  }
+
 ];
 
 const Projects = () => {

@@ -8,8 +8,8 @@ import Home from './sections/Home'
 import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import { AllProjects } from './pages/AllProjects'
-import FloatingChat from './components/FloatingChat'
 import Chat from './components/Chat'
+import FloatingChatWrapper from './components/FloatingChatWrapper'
 
 
 const MainPages = () => {
@@ -34,7 +34,7 @@ function App() {
       <Route path='/chat' element={<Chat/>}></Route>
     </Routes>
     <Footer/>
-    <FloatingChat/>
+    <FloatingChatWrapper/>
     </Router>
   )
 }
