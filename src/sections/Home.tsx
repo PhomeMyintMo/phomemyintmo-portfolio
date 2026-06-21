@@ -8,7 +8,7 @@ const Home = () => {
     <section
       ref={ref}
       id="home"
-      className=" bg-background space-y-4 flex flex-col justify-center text-center py-24"
+      className=" bg-background space-y-4 flex flex-col justify-center text-center py-40"
     >
 
       <div className="text-left">

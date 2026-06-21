@@ -25,7 +25,7 @@ export const AllProjects = () => {
     //     setCurrentImage((prev) => prev === 0 ? project.images.length - 1 : prev - 1)
     // }
     return (
-        <section ref={ref} className="section py-20 p-20">
+        <section ref={ref} className="section py-20 p-8 sm:p-16 md:p-24">
             <div className="space-y-4">
                 <Link to={"/"} className="flex items-center gap-2 hover:font-semibold"><BiArrowBack />Go Back</Link>
 

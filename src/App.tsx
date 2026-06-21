@@ -14,7 +14,7 @@ import Chat from './components/Chat'
 
 const MainPages = () => {
   return(
-    <div className='space-y-32 mx-auto p-2 sm:p-4 md:p-8'>
+    <div className='space-y-32 mx-auto p-8 sm:p-16 md:p-24'>
     <Home/>
     <Skills/>
     <Projects/>
