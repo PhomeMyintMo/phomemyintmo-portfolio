@@ -9,6 +9,7 @@ import Projects from './sections/Projects'
 import Skills from './sections/Skills'
 import { AllProjects } from './pages/AllProjects'
 import FloatingChat from './components/FloatingChat'
+import Chat from './components/Chat'
 
 
 const MainPages = () => {
@@ -30,7 +31,7 @@ function App() {
     <Routes>
       <Route path='/' element={<MainPages/>}/>
       <Route path='/projects' element={<AllProjects/>}></Route>
-      <Route path='/chat/*' element={<div/>}></Route>
+      <Route path='/chat' element={<Chat/>}></Route>
     </Routes>
     <Footer/>
     <FloatingChat/>

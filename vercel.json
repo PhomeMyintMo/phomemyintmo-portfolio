@@ -3,6 +3,14 @@
     {
       "source": "/chat/:path*",
       "destination": "https://personal-ai-chatbot-alpha.vercel.app/:path*"
+    },
+    {
+      "source": "/_next/:path*",
+      "destination": "https://personal-ai-chatbot-alpha.vercel.app/_next/:path*"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://personal-ai-chatbot-alpha.vercel.app/api/:path*"
     }
   ]
 }
