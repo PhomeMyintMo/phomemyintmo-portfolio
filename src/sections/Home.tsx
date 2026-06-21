@@ -12,9 +12,9 @@ const Home = () => {
     >
 
       <div className="text-left">
-        <h5 className="font-semibold">Hello! I'm <span className="text-secondary font-bold text-lg sm:text-xl md:text-2xl"> Phome Myint Mo</span></h5>
-        <h2 className="text-sm sm:text-lg md:text-xl font-semibold italic">Frontend Developer</h2>
-        <p className="text-lg">
+        <h5 className="font-semibold text-lg">Hello! I'm <span className="text-secondary font-bold text-xl sm:text-2xl"> Phome Myint Mo</span></h5>
+        <h2 className="text-lg sm:text-xl font-semibold italic">Frontend Developer</h2>
+        <p>
           I build modern web applications with a focus on clean design, usability, and
           performance.I love exploring new technologies, experimenting with design
           trends, and crafting digital experiences that are both useful, functional and enjoyable.

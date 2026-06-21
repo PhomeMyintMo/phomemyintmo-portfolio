@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/chat/:path*",
+      "destination": "https://personal-ai-chatbot-alpha.vercel.app/:path*"
+    }
+  ]
+}

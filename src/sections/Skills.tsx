@@ -28,7 +28,7 @@ const Skills = () => {
             className="flex max-w-sm items-center gap-1 p-1 px-2 bg-background shadow-[var(--shadow-brutal)] border"
           >
             <span className={` ${skill.color}`}>{skill.icon}</span>
-            <p className="text-xs sm:text-sm font-medium">{skill.name}</p>
+            <p className="font-medium">{skill.name}</p>
           </div>
         ))}
       </div>

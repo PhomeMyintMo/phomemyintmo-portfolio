@@ -13,7 +13,7 @@ import FloatingChat from './components/FloatingChat'
 
 const MainPages = () => {
   return(
-    <div className='space-y-32 mx-auto p-4 sm:p-8 md:p-16'>
+    <div className='space-y-32 mx-auto p-2 sm:p-4 md:p-8'>
     <Home/>
     <Skills/>
     <Projects/>
@@ -30,6 +30,7 @@ function App() {
     <Routes>
       <Route path='/' element={<MainPages/>}/>
       <Route path='/projects' element={<AllProjects/>}></Route>
+      <Route path='/chat/*' element={<div/>}></Route>
     </Routes>
     <Footer/>
     <FloatingChat/>
