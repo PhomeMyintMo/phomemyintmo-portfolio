@@ -87,7 +87,8 @@ export const projects = [
     id: "ecommerce-website",
     title: "E-commerce Website",
 description:
-  "An ongoing full-stack fashion e-commerce case study focused on creating a smooth, efficient, and convenient online shopping experience.",    detailedDescription: "This personal case study explores the challenges of online clothing shopping in Myanmar, where many small businesses rely on Facebook, a platform that currently requires a VPN to access. This dependency makes browsing products, communicating with sellers, and completing purchases slow and inconvenient. I designed and developed a modern e-commerce platform that enables small clothing businesses to manage their own online storefronts, allowing customers to browse products, search by category, and add items to their cart.",
+  "An ongoing full-stack fashion e-commerce case study focused on creating a smooth, efficient, and convenient online shopping experience.",    
+  detailedDescription: "This personal ongoing case study explores the challenges of online clothing shopping in Myanmar, where many small businesses rely on Facebook, a platform that currently requires a VPN to access. This dependency makes browsing products, communicating with sellers, and completing purchases slow and inconvenient. I designed and developed a modern e-commerce platform that enables small clothing businesses to manage their own online storefronts, allowing customers to browse products, search by category, and add items to their cart.",
     liveLink: "https://e-commerce-phome.vercel.app/",
     codeLink: "https://github.com/PhomeMyintMo/e-commerce",
     techStack: [{ name: "React", icon: <FaReact />, color: "text-[#61DAFB]", },
