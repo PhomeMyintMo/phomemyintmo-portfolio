@@ -134,7 +134,7 @@ const Projects = () => {
 
               <div className="flex items-center justify-between gap-4 mt-6 pt-4 border-t">
                 <div className="flex gap-4">
-                  {project.liveLink && (
+                  {(project.liveLink && project.id !== "content-management") && (
                     <a
                       href={project.liveLink}
                       target="_blank"
@@ -144,12 +144,12 @@ const Projects = () => {
                       Live <FaExternalLinkAlt className="text-xs" />
                     </a>
                   )}
-                  {project.codeLink && (
+                  {(project.codeLink && project.id !== "content-management") && (
                     <a
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+                      className="flex items-center gap-1.5 text-sm font-medium hover:font-semibold transition-colors"
                     >
                       Code <FaGithub />
                     </a>

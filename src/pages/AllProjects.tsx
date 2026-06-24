@@ -136,7 +136,7 @@ export const AllProjects = () => {
                             <h3 className="font-bold text-xl mb-4">
                                 Tech Stack
                             </h3>
-                            <span className="font-semibold">⋆ Frontend</span>
+                            <span className="font-semibold">{project.id === "ecommerce-website" ? "⋆ Frontend/ Backend" : "⋆ Frontend"}</span>
                         </div>
 
                         <div className="flex flex-wrap gap-2">
