@@ -85,9 +85,9 @@ export const projects = [
   },
   {
     id: "ecommerce-website",
-    title: "E-commerce Website",
-description:
-  "An ongoing full-stack fashion e-commerce case study focused on creating a smooth, efficient, and convenient online shopping experience.",    detailedDescription: "This personal case study explores the challenges of online clothing shopping in Myanmar, where many small businesses rely on Facebook, a platform that currently requires a VPN to access. This dependency makes browsing products, communicating with sellers, and completing purchases slow and inconvenient. I designed and developed a modern e-commerce platform that enables small clothing businesses to manage their own online storefronts, allowing customers to browse products, search by category, and add items to their cart.",
+    title: "🛍️ E-commerce Website",
+    description:
+      "An ongoing full-stack fashion e-commerce case study focused on creating a smooth, efficient, and convenient online shopping experience.", detailedDescription: "This personal case study explores the challenges of online clothing shopping in Myanmar, where many small businesses rely on Facebook, a platform that currently requires a VPN to access. This dependency makes browsing products, communicating with sellers, and completing purchases slow and inconvenient. I designed and developed a modern e-commerce platform that enables small clothing businesses to manage their own online storefronts, allowing customers to browse products, search by category, and add items to their cart.",
     liveLink: "https://e-commerce-phome.vercel.app/",
     codeLink: "https://github.com/PhomeMyintMo/e-commerce",
     techStack: [{ name: "React", icon: <FaReact />, color: "text-[#61DAFB]", },
@@ -102,7 +102,7 @@ description:
     features: ["Product browsing with category and search filtering",
       "Persistent shopping cart with local storage", "Responsive UI optimized for mobile shopping",
       "Image hosting and optimization with ImageKit", "RESTful API built with Express and Prisma",
-      ],
+    ],
   }
 
 ];
@@ -113,13 +113,20 @@ const Projects = () => {
   return (
     <section id="projects" className="section" ref={ref}>
       <div className="flex flex-col">
-        <h2 className="text-3xl font-bold mb-10 text-center">Selected Works</h2>
-
+       <h2 className="text-3xl font-bold mb-10 text-center flex items-center justify-center gap-3">
+  <span className="grid grid-cols-2 gap-[2px] w-4 h-4 rotate-45">
+    <span className="bg-yellow-400 border border-black shadow-[1px_1px_0_black]" />
+    <span className="bg-yellow-400 border border-black shadow-[1px_1px_0_black]" />
+    <span className="bg-yellow-400 border border-black shadow-[1px_1px_0_black]" />
+    <span className="bg-yellow-400 border border-black shadow-[1px_1px_0_black]" />
+  </span>
+  Selected Works
+</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayProjects.map((project, index) => (
             <div
               key={index}
-              className="p-6 shadow-[var(--shadow-brutal)] border text-start hover:scale-105 transition-transform"
+              className="p-6 shadow-[var(--shadow-brutal)] bg-background border text-start hover:scale-105 transition-transform"
             >
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="mb-4">{project.description}</p>

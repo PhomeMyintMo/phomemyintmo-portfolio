@@ -25,10 +25,13 @@ const Experience = () => {
 
   return (
     <section ref={ref} id="my-journey" className="section">
-      <div>
-        <h2 className="mb-16 text-center text-4xl font-bold">
-          My Journey
-        </h2>
+   <div>
+  <h2 className="text-3xl font-bold mb-10 text-center flex items-center justify-center gap-3">
+    <span className="flex items-center justify-center w-4 h-4 bg-pink-400 border-2 border-black shadow-[3px_3px_0px_black]">
+      <span className="w-1 h-1 bg-black" />
+    </span>
+    My Journey
+  </h2>
 
         <div className="relative border-l-2 border-border pl-8">
           {experiences.map((exp, index) => (

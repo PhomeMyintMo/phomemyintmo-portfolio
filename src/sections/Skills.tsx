@@ -17,8 +17,12 @@ const Skills = () => {
   const ref = useReveal<HTMLElement>();
   return (
     <section ref={ref} id="skills" className="section">
-      <h2 className="text-3xl font-bold mb-10 text-center">Tech Stacks</h2>
-
+ <h2 className="text-3xl font-bold mb-10 text-center flex items-center justify-center gap-3">
+  <span className="text-green-400 text-lg drop-shadow-[2px_2px_0_black]">
+  {"</>"}
+</span>
+  Tech Stacks
+</h2>
       <div className="space-y-6">
 
       <div className="flex flex-wrap justify-left gap-3">
